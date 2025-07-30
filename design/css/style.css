@@ -1,0 +1,117 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background: #000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #00fffc;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 0 0 10px #000;
+    color: #00a4a2;
+}
+
+.login-container, .app-container {
+    width: 80%;
+    background: #00202F;
+    border: 1px solid #00a4a2;
+    box-shadow: 0 0 20px #00fffc;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+button {
+    background: #222;
+    color: #00fffc;
+    border: 1px solid #00a4a2;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+}
+button:hover {
+    background: #00a4a2;
+    color: #fff;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    background: #111;
+    color: #00fffc;
+    border: 1px solid #00a4a2;
+    padding: 5px;
+    width: 250px;
+    margin: 5px 0;
+}
+
+.course-textarea {
+    width: 100%;
+    height: 300px;
+    background: #111;
+    color: #00fffc;
+    border: 1px solid #00a4a2;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.panel {
+    background: #000;
+    border: 1px solid #00a4a2;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 5px #00a4a2;
+}
+
+.users-list p {
+    border-bottom: 1px solid #00a4a2;
+    padding: 5px 0;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom:20px;
+}
+.data-table th, .data-table td {
+    border: 1px solid #00a4a2;
+    padding: 5px;
+    text-align:center;
+}
+.data-table th {
+    background: #001020;
+    color: #00fffc;
+}
+
+.theme-block {
+    border:1px solid #00a4a2;
+    padding:10px;
+    margin:10px 0;
+    box-shadow:0 0 5px #00a4a2;
+}
+
+.editable-cell {
+    cursor: pointer;
+    position: relative;
+}
+.editable-input {
+    width:90%;
+    background:#111;
+    color:#00fffc;
+    border:1px solid #00a4a2;
+}
+.save-btn {
+    background:#00a4a2;
+    color:#fff;
+    margin-left:5px;
+    border:1px solid #00a4a2;
+    cursor:pointer;
+}
