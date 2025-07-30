@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sci-Fi Course Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="login-container" id="login-form">
+        <h1>Авторизация</h1>
+        <input type="text" id="username" placeholder="Логин"><br>
+        <input type="password" id="password" placeholder="Пароль"><br>
+        <button onclick="login()">Войти</button>
+        <hr>
+        <h2>Регистрация</h2>
+        <input type="text" id="reg_username" placeholder="Логин"><br>
+        <input type="password" id="reg_password" placeholder="Пароль"><br>
+        <input type="email" id="reg_email" placeholder="Email"><br>
+        <button onclick="registerUser()">Зарегистрироваться</button>
+    </div>
+
+    <div id="app" class="app-container" style="display:none;">
+        <h1>Просмотр/редактирование предмета</h1>
+        <div class="panel">
+            <h3>Предметы:</h3>
+            <button onclick="loadSubjects()">Загрузить предметы</button>
+            <select id="subject-select"></select>
+            <button onclick="loadSelectedCourse()">Загрузить предмет</button>
+        </div>
+        <h2>Название: <span id="course-name"></span></h2>
+
+        <div id="course-view" style="margin-top:20px;"></div>
+
+        <div class="panel" id="teacher-panel" style="display:none;">
+            <h3>Редактирование полного JSON</h3>
+            <textarea id="course-data" class="course-textarea"></textarea><br>
+            <button onclick="updateCourse()">Обновить курс целиком</button><br><br>
+
+            <h3>Редактирование конкретного поля</h3>
+            <input type="text" id="edit-field-name" placeholder="Название поля">
+            <input type="text" id="edit-field-value" placeholder="Новое значение">
+            <button onclick="editFieldUI()">Обновить поле</button><br><br>
+
+            <h3>Генерация документов</h3>
+            <button onclick="generateDocUI('methodichka')">Методичка</button>
+            <button onclick="generateDocUI('summary')">Сводный отчет</button>
+            <button onclick="generateDocBiletsUI()">Сгенерировать билеты (с настройкой)</button>
+        </div>
+    </div>
+
+    <div id="superadmin-panel" class="app-container" style="display:none;">
+        <h2>Superadmin панель</h2>
+        <div class="panel">
+            <button onclick="loadUsers()">Загрузить пользователей</button>
+            <div id="users-list" class="users-list"></div>
+        </div>
+        <div class="panel">
+            <h3>Изменить роль пользователя</h3>
+            <input type="text" id="change-role-username" placeholder="Логин пользователя">
+            <input type="text" id="change-role-newrole" placeholder="Новая роль (teacher/student)">
+            <button onclick="changeUserRole()">Изменить роль</button>
+        </div>
+        <div class="panel">
+            <h3>Назначить предметы пользователю (преподавателю)</h3>
+            <input type="text" id="assign-subjects-username" placeholder="Логин пользователя">
+            <input type="text" id="assign-subjects-list" placeholder='["subject_1.json","subject_2.json"]'>
+            <button onclick="assignSubjects()">Назначить</button>
+        </div>
+    </div>
+</body>
+</html>
